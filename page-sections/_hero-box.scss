@@ -1,0 +1,140 @@
+@use 'colors';
+@use 'responsive';
+
+.hero-box {
+  display: flex;
+  width: 100%;
+  margin-top: 182px;
+  margin-bottom: 200px;
+
+  @include responsive.lg {
+    margin-top: 60px;
+    margin-bottom: 100px;
+    padding-right: 0;
+  }
+
+  @include responsive.sm {
+    margin-top: 60px;
+    margin-bottom: 0;
+  }
+
+  .title-wrapper {
+    width: 50%;
+
+    .announcement {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      color: colors.$pink;
+      margin: 24px 0;
+
+      @include responsive.md {
+        font-size: 12px;
+      }
+    }
+
+    h1 {
+      font-size: 96px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: normal;
+      color: colors.$black;
+      margin: 0;
+
+      @include responsive.md {
+        font-size: 60px;
+      }
+
+      @include responsive.mobile {
+        font-size: 48px;
+      }
+    }
+
+    .title-text {
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      color: colors.$dark-grey;
+      margin: 32px 0;
+
+      @include responsive.md {
+        font-size: 16px;
+    
+      }
+
+      @include responsive.mobile {
+        margin: 20px 0;
+      }
+    }
+
+    .sign-up-button {
+      color: colors.$black;
+      text-transform: capitalize;
+      font-size: 20px;
+      font-weight: 600;
+      font-style: normal; 
+      line-height: 150%;
+      padding: 22px 56px 23px;
+      margin-top: 41px;
+      border-radius: 50px;
+      cursor: pointer;
+      text-decoration: none;
+      border-style: solid;
+      border-width: 2px;
+      border-color: colors.$pink;
+      display: inline-block;
+      transition-duration: 0.3s;
+
+      @include responsive.md {
+        font-size: 16px;
+        padding: 15px 45px 17px;
+      }
+
+      @include responsive.mobile {
+        margin-top: 30px;
+      }
+    }
+
+    .sign-up-button:hover {
+      background-color: colors.$pink;
+      color: white;
+    }
+  }
+
+  .title-image-container {
+    width: 50%;
+
+    @include responsive.lg {
+      overflow: hidden;
+    }
+
+    @include responsive.sm {
+      width: 50%;
+    }
+
+    .title-image {
+
+      @include responsive.lg {
+        object-fit: contain;
+      }
+
+      @include responsive.md {
+        object-fit: cover;
+      }
+
+      @include responsive.sm {
+        height: 50%;
+        object-fit: cover;
+      }
+
+      @include responsive.mobile {
+        object-fit: cover;
+        object-position: -15px 0;
+      }
+    }
+  }
+}

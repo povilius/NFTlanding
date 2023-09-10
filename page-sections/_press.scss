@@ -1,0 +1,41 @@
+@use 'responsive';
+
+.press-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 120px;
+  margin-bottom: 120px;
+
+  @include responsive.sm {
+    flex-wrap: wrap;
+    row-gap: 30px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  @include responsive.mobile {
+    justify-content: center;
+    column-gap: 50px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+
+  .press-logo {
+    width: 15%;
+
+    @include responsive.sm {
+      width: 40%;
+    }
+
+    &.sm-none {
+      @include responsive.sm {
+      display: none;
+      }
+    }
+
+    @include responsive.mobile {
+      width: 30%;
+    }
+  }
+}

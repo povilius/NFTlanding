@@ -1,0 +1,150 @@
+@use 'colors';
+@use 'responsive';
+
+.footer-upsell-wrapper{
+  display: flex;
+  width: 100%;
+  margin-top: 182px;
+  margin-bottom: 200px;
+  padding-top: 86px;
+  border-top: 2px solid colors.$light-grey;
+  border-bottom: 2px solid colors.$light-grey;
+
+  @include responsive.sm {
+    margin-top: 120px;
+    margin-right: 0;
+    padding-right: 0;
+  }
+
+  .footer-upsell-info {
+    width: 50%;
+
+    @include responsive.sm {
+      width: 80%;
+    }
+
+    @include responsive.mobile {
+      width: 100%;
+    }
+
+    .announcement {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      color: colors.$pink;
+      margin: 24px 0;
+
+      @include responsive.md {
+        font-size: 12px;
+      }
+    }
+
+    h2 {
+      font-size: 56px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: normal;
+      color: colors.$black;
+      margin: 0;
+
+      @include responsive.md {
+        font-size: 56px;
+      }
+    }
+
+    .footer-upsell-text {
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      color: colors.$dark-grey;
+      margin: 32px 0;
+
+      @include responsive.md {
+        font-size: 14px;
+      }
+    }
+
+    .sign-up-button {
+      color: colors.$black;
+      text-transform: capitalize;
+      font-size: 20px;
+      font-weight: 600;
+      font-style: normal; 
+      line-height: 150%;
+      padding: 22px 56px 23px;
+      margin-top: 41px;
+      border-radius: 50px;
+      cursor: pointer;
+      text-decoration: none;
+      border-style: solid;
+      border-width: 2px;
+      border-color: colors.$pink;
+      display: inline-block;
+      transition-property: background-color, color,border-color;
+      transition-duration: 0.3s;
+      transition-timing-function: ease;
+
+      @include responsive.lg {
+        font-size: 16px;
+        margin-top: 20px;
+      }
+
+      @include responsive.md {
+        font-size: 16px;
+        padding: 15px 45px 17px;
+      }
+
+      @include responsive.sm {
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .sign-up-button:hover {
+      background-color: colors.$pink;
+      color: white;
+    }
+  }
+
+  .footer-upsell-image-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+
+    .footer-upsell-image {
+      display: flex;
+      width: 30%;
+
+      @include responsive.lg {
+        width: 50%;
+        object-fit: cover;
+        object-position: 0px 10px;
+      }
+
+      @include responsive.md {
+        width: 50%;
+        object-fit: cover;
+        object-position: 0px 10px;
+      }
+
+      @include responsive.sm {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: 0px 30px;
+      }
+
+      @include responsive.mobile {
+        height: 70%;
+        width: 100%;
+        object-fit: cover;
+        object-position: 0px 30px;
+        margin-top: 146px;
+      }
+    }
+  }
+}

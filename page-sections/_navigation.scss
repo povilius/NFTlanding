@@ -1,0 +1,67 @@
+@use 'colors';
+@use 'responsive';
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 70px;
+
+  @include responsive.mobile {
+    margin-top: 30px;
+  }
+
+  .main-navigation {
+    display: flex;
+    align-items: center;
+
+    .hamburger-menu {
+      display: none;
+
+      @include responsive.md {
+        display: flex;
+        padding-right: 10px;
+      }
+    }
+
+    ul.main-menu {
+      list-style-type: none;
+      padding-left: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      margin: 0;
+      column-gap: 28px;
+
+      @include responsive.md {
+        display: none;
+      }
+
+      
+      a.menu-link {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+        text-decoration: none;
+        color: colors.$dark-grey;
+        display: inline-block;
+        transition-duration: 0.3s;
+
+        @include responsive.md {
+          font-size: 15px;
+        }
+      }
+      
+      a.color-pink {
+        text-transform: capitalize;
+        color: colors.$pink;
+        transition-duration: 0.3s;
+      }
+
+      a.menu-link:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
